@@ -1,0 +1,66 @@
+Data Project, GORM version
+
+NOTE: the database for this project should be PostgreSQL.
+
+
+Part 1. SQL scripts to create, drop database
+
+      Create "helper" SQL scripts that make it easy  to run your code.
+
+    - Script 1, "create script" - should create a new database on which the GORM code will run.
+    - Script 2, "delete script" - should drop the database of this project. It should also clean   	     up any other resources like users, your "create script" creates.
+
+Part 2. GORM loader script
+
+    - This script should load the entire CSV data into the database.
+
+TASKS
+
+    - Design table schema, based on your CSV.
+    - Note that you might have multiple tables. Either for multiple CSV or supporting data like  	   country lists/state lists etc. You must design Primary Key - Foreign Key relations for those.
+    *Write GORM code for ...
+        - mapping declarations
+        - creating schema
+        - generating JSON files similar JS data project but this uses your database instead of CSV 		  file.
+
+Part 3: JSON generation [GOLANG]
+
+   - Write a go program that fetches data from  database, and produces 4 JSON files as output.
+   - Each JSON file contains the aggregated data for each plot of your data assignment.
+   - IMPORTANT the JSON files should NOT have all the data from the tables . Instead, it should    	    contain result of the aggregations that your program does.
+   - The structure of JSON should be based on data needed for the HighCharts plot.
+
+
+
+Part 4
+
+   - write  HTML / js code  and test against the JSON generated 
+   
+Part 5- Hosting
+
+   - Host  on Heroku.
+
+
+
+
+Problems
+1. Total runs scored by each team
+
+Plot a chart of the total runs scored by each team over the history of IPL. Hint: use the total_runs field.
+
+2. Top batsman for Royal Challengers Bangalore
+
+Consider only games played by Royal Challengers Bangalore. Now plot the total runs scored by every batsman playing for Royal Challengers Bangalore over the history of IPL.
+
+3. Foreign umpire analysis
+
+Obtain a source for the country of origin of umpires. Plot a chart of the number of umpires by in IPL by country. Indian umpires should be ignored as this would dominate the graph.
+
+4. Group chart of matches played by team by season
+
+Plot a group bar chart of the number of games played ...
+
+    by team
+    by season
+
+
